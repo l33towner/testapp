@@ -39,7 +39,7 @@
     <gap:plugin name="org.apache.cordova.core.device" />
 	<gap:plugin name="org.apache.cordova.core.geolocation" />
 	<gap:plugin name="org.apache.cordova.core.battery-status" />
-	
+	<plugin name="TelephoneNumber" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
