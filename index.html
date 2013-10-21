@@ -12,13 +12,8 @@
 
 <script>
 $.mobile.page.prototype.options.backBtnText = 'Åter';
+  var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
 
-var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-telephoneNumber.get(function(result) {
-        console.log("result = " + result);
-    }, function() {
-        console.log("error");
-    });
 function provresultat(provnr, provkod)
 {
   var result = Math.floor((Math.random() * 9));
@@ -271,6 +266,12 @@ function skapaprov()
   <a href="javascript:test_phonegap_extern('https://systemc2.c2management.se/test/phonegapbuilds/Stefan/externtest.htm')">Test windowopen https</a><br><br>
   <a href="javascript:test_phonegap_externsimple('https://systemc2.c2management.se/test/phonegapbuilds/Stefan/externtest.htm')">Test windowopen simple</a><br><br>
   <script>
+  
+  function telephoneNumber.get(function(result) {
+        alert("result = " + result);
+    }, function() {
+        alert("error");
+    });
   function test_phonegap_extern(sida) {
     window.open(sida,'externtest','width=300,height=400,scrollbars=yes,resizable=yes');
   }
