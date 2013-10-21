@@ -257,7 +257,7 @@ function skapaprov()
   Lite info...<br>
   Lite mer info...<br>
   Lite slutlig info...<br>
-  <a href="javascript:telephoneNumber.get(function(result)">Testa get phonenumber</a><br><br>
+  <a href="javascript:telephoneNumber()">Testa get phonenumber</a><br><br>
   <a href="javascript:test_phonegap()">Testa phonegap</a><br><br>
   <a href="javascript:test_gps()">Testa GPS</a><br><br>
   <a href="http://systemc2.c2management.se/test/phonegapbuilds/Stefan/externtest.htm">Test extern http</a><br><br>
@@ -267,11 +267,10 @@ function skapaprov()
   <a href="javascript:test_phonegap_externsimple('https://systemc2.c2management.se/test/phonegapbuilds/Stefan/externtest.htm')">Test windowopen simple</a><br><br>
   <script>
   
-  telephoneNumber.get(function(result) {
-        alert("result = " + result);
-    }, function() {
-        alert("error");
-    });
+  function telephoneNumber() {
+  alert('OK= '+telephoneNumber.get(succes));
+  alert('Error= '+telephoneNumber.get(failure));
+  }
   function test_phonegap_extern(sida) {
     window.open(sida,'externtest','width=300,height=400,scrollbars=yes,resizable=yes');
   }
